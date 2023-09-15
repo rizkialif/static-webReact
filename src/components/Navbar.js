@@ -1,6 +1,7 @@
 import React from 'react';
 import { Disclosure} from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import navlogo from '../rizlogo.png';
 
 const navigation = [
     { name: 'Tutorial', href: '/list-tutorial', current: false },
@@ -35,9 +36,10 @@ function Navbar() {
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center">
                             <a className='flex flex-shrink-0 items-center' href='/'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                </svg>
+                                </svg> */}
+                                <img src={navlogo} className='w-12'/>
                                 <span className='px-2 text-black font-bold '>RizNetwork</span>
                             </a>
                         </div>
@@ -48,8 +50,10 @@ function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(
-                                    item.current ? 'bg-white text-black' : 'text-black hover:bg-gradient-to-r from-purple-400 to-pink-600 hover:text-white',
+                                    item.current ? 'bg-white text-[#176B87]' : 'text-[#176B87] hover:bg-[#176B87] hover:text-white',
                                     'rounded-md px-4 py-2 text-sm font-medium'
+                                    // item.current ? 'bg-white text-black' : 'text-black hover:bg-gradient-to-r from-purple-400 to-pink-600 hover:text-white',
+                                    // 'rounded-md px-4 py-2 text-sm font-medium'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                                 >
@@ -71,7 +75,7 @@ function Navbar() {
                     as="a"
                     href={item.href}
                     className={classNames(
-                        item.current ? 'bg-white text-black' : 'text-black',
+                        item.current ? 'bg-white text-[#176B87]' : 'text-[#176B87] hover:bg-[#176B87] hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

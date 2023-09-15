@@ -6,8 +6,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'banner': "url('../public/assets/rizbarner.jpg')"
-      }
+        'banner': "url('../public/assets/rizbarner.jpg')",
+        'homebanner': "url('../public/assets/homebanner.jpg')"
+      },
+      colors: {
+        'regal-blue': '#176B87',
+      },
     },
     fontSize: {
       '2xl': ['1.5rem', {
@@ -19,6 +23,9 @@ module.exports = {
         lineHeight: '2.25rem',
         letterSpacing: '-0.02em',
         fontWeight: '700',
+      }],
+      'footer-logo': ['1.75rem', {
+        letterSpacing: '-0.02em',
       }],
     }
   },
