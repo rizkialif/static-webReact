@@ -1,5 +1,5 @@
 import React from 'react';
-import Pagebanner from '../components/Pagebanner';
+import Banner from '../components/Banner';
 
 const tutorialmenu = [
     { id: 1, title: 'Access Point Tenda Type Lama', img:'/assets/rizbarner.jpg', href: '/tendalama'},
@@ -14,8 +14,8 @@ const tutorialmenu = [
 function PagesTutorial() {
     return(
         <div>
-            <Pagebanner/>
-            
+            {/* <Pagebanner/> */}
+            {/* <Banner /> */}
             <div className='lg:my-10 my-5'>
                 <div className='ml-5 mb-2 lg:ml-[2.5rem]'>
                     <label className='lg:font-tutor text-2xl'>Tutorial Konfigurasi Jaringan</label>
@@ -24,7 +24,7 @@ function PagesTutorial() {
                 <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-4 px-5 lg:pl-10 text-center">
                     {tutorialmenu.map((item) => (
                         <a key={item.id} href={item.href}>
-                            <div className='h-[8rem] lg:h-[12rem] mb-5 lg:mb-5 lg:py-2 rounded shadow-slate-600/50 shadow-lg hover:shadow-purple-600/90 hover:shadow-lg hover:cursor-pointer'>
+                            <div className='h-[8rem] lg:h-[12rem] mb-5 lg:mb-5 lg:py-2 rounded shadow-slate-600/50 shadow-lg hover:shadow-regal-blue hover:cursor-pointer'>
                                 <div  className='rounded lg:image-size-lg'>
                                     <img className="h-27 rounded w-full" src={item.img} alt='banner-1'/>
                                 </div>
